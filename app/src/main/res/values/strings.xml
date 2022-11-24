@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">V.A.T. Calculator</string>
+    <string name="price_label">Price</string>
+    <string name="vat_label">V.A.T.</string>
+    <string name="total_label">Total</string>
+    <string name="calculate_button">Calculate</string>
+</resources>

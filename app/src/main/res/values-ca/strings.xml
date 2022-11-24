@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calculadora d\'I.V.A.</string>
+    <string name="price_label">Preu</string>
+    <string name="vat_label">I.V.A.</string>
+    <string name="total_label">Total</string>
+    <string name="calculate_button">Calcular</string>
+</resources>
