@@ -10,12 +10,13 @@
         android:id="@+id/total_editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="278dp"
+        android:layout_marginEnd="5dp"
+        android:width="256dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView4" />
 
@@ -23,37 +24,39 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginBottom="37dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="213dp"
         android:text="@string/price_label"
         android:textSize="32sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toStartOf="@+id/price_editText"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/vat_editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="77dp"
+        android:layout_marginEnd="1dp"
+        android:width="150dp"
         android:ems="10"
-        android:enabled="true"
+        android:enabled="false"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/total_editText"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/select_vat_button"
         app:layout_constraintStart_toEndOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/price_editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="6dp"
+        android:width="256dp"
         android:ems="10"
         android:enabled="true"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView" />
 
@@ -61,37 +64,46 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="29dp"
         android:text="@string/vat_label"
         android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="@+id/vat_editText"
         app:layout_constraintEnd_toStartOf="@+id/vat_editText"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="83dp"
         android:text="@string/total_label"
         android:textSize="32sp"
         app:layout_constraintEnd_toStartOf="@+id/total_editText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/total_editText" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/calculate_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="57dp"
+        android:backgroundTint="@color/teal_200"
         android:text="@string/calculate_button"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/total_editText" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/select_vat_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:text="@string/select_vat_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/vat_editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vat_editText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
