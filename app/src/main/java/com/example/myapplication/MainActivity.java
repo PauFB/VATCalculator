@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +16,18 @@ public class MainActivity extends AppCompatActivity {
     private TextView totalEditText;
     private Button selectVATButton;
     private Button calculateButton;
+
+    private boolean checkInput() {
+        if (priceEditText.getText().toString().matches("")) {
+            Toast.makeText(getApplicationContext(), R.string.toast_type_price, Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (vatEditText.getText().toString().matches("")) {
+            Toast.makeText(getApplicationContext(), R.string.toast_select_vat, Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (!checkInput())
+                    return;
                 String[] str = vatEditText.getText().toString().split(" - ");
                 String percentageStr = str[1].substring(0, str[1].length() - 1).replace(",", ".");
                 Double percentage = Double.parseDouble(percentageStr);

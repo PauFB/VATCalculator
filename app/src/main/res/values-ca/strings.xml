@@ -10,4 +10,6 @@
     <string name="country_vat_italy">Itàlia - 22%</string>
     <string name="ok_button">D\'acord</string>
     <string name="select_vat_button">Seleccionar</string>
+    <string name="toast_type_price">Indica un preu</string>
+    <string name="toast_select_vat">Selecciona el tipus d\'I.V.A.</string>
 </resources>

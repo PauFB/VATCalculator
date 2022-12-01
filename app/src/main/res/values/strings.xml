@@ -10,4 +10,6 @@
     <string name="country_vat_italy">Italy - 22%</string>
     <string name="ok_button">Ok</string>
     <string name="select_vat_button">Select</string>
+    <string name="toast_type_price">Type a price</string>
+    <string name="toast_select_vat">Select a V.A.T. type</string>
 </resources>
